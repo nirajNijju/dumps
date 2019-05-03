@@ -1,17 +1,20 @@
 
 
-
-
 LINES=$(cat today.txt | wc -l)
 
-if [ $LINES <2  ]
+
+d=$(date '+%Y-%m-%d')
+msg=$(grep ${d} today_local.txt)
+lenMsg=${#msg}
+echo "$lenMsg"
+
+if [ $lenMsg -lt 2  ]
 then
 	LINES=$(cat msg.txt | wc -l)
 	R_LINE=$(($RANDOM % LINES))
 	msg=$(sed -n "${R_LINE}p" msg.txt)
 	echo ${R_LINE}
-else
-   msg=$(cat today.txt)
+
 fi
 
 

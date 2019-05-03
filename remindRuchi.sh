@@ -4,7 +4,7 @@ LINES=$(cat today.txt | wc -l)
 
 
 d=$(date '+%Y-%m-%d')
-msg=$(grep ${d} today_local.txt)
+msg=$(grep ${d} today.txt)
 lenMsg=${#msg}
 echo "$lenMsg"
 

@@ -18,5 +18,5 @@ fi
 
 echo "${date} msg: ${msg}"
 
-notify-send Ruchi "${msg}" --icon niraj.jpg
+/usr/bin/notify-send Ruchi "${msg}" --icon niraj.jpg
 # /usr/local/bin/terminal-notifier  -message "${msg}" -title "R" -sound "Submarine" 
